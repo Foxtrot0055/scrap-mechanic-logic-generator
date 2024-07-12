@@ -2,3 +2,5 @@
 
 this is a python libary for generating scrap mechanic blueprints mainly logic ones
 
+early WIP
+
