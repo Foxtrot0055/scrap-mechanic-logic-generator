@@ -1,7 +1,7 @@
 import json
 
 class make():
-    blueprint = {'bodies': [{'childs': []}]}
+    blueprint = {'bodies': [{'childs': []}],'version': 4}
     id_count = 0
     def logic_gate(pos_x, pos_y, pos_z, input=None, color="222222", rot_x=0, rot_z=0, type=0):
         make.blueprint['bodies'][0]['childs'].append(1)
