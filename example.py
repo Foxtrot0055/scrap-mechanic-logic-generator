@@ -1,10 +1,11 @@
 import sm_logic_lib as sm
 
 for i in range(5):
-    sm.make.logic_gate(i,0,0, [2])
+    if i<4: input = [i+1]
+    sm.make.logic_gate(i,0,0,input)
 sm.make.print()
 
-#this prints:
+# {
 #    "bodies": [
 #       {
 #          "childs": [
@@ -12,7 +13,11 @@ sm.make.print()
 #                "color": "222222",
 #                "controller": {
 #                   "active": false,
-#                   "controllers": null,
+#                   "controllers": [
+#                      {
+#                         "id": 1
+#                      }
+#                   ],
 #                   "id": 0,
 #                   "joints": null,
 #                   "mode": 0
@@ -30,7 +35,11 @@ sm.make.print()
 #                "color": "222222",
 #                "controller": {
 #                   "active": false,
-#                   "controllers": null,
+#                   "controllers": [
+#                      {
+#                         "id": 2
+#                      }
+#                   ],
 #                   "id": 1,
 #                   "joints": null,
 #                   "mode": 0
@@ -48,7 +57,11 @@ sm.make.print()
 #                "color": "222222",
 #                "controller": {
 #                   "active": false,
-#                   "controllers": null,
+#                   "controllers": [
+#                      {
+#                         "id": 3
+#                      }
+#                   ],
 #                   "id": 2,
 #                   "joints": null,
 #                   "mode": 0
@@ -66,7 +79,11 @@ sm.make.print()
 #                "color": "222222",
 #                "controller": {
 #                   "active": false,
-#                   "controllers": null,
+#                   "controllers": [
+#                      {
+#                         "id": 4
+#                      }
+#                   ],
 #                   "id": 3,
 #                   "joints": null,
 #                   "mode": 0
@@ -84,7 +101,11 @@ sm.make.print()
 #                "color": "222222",
 #                "controller": {
 #                   "active": false,
-#                   "controllers": null,
+#                   "controllers": [
+#                      {
+#                         "id": 4
+#                      }
+#                   ],
 #                   "id": 4,
 #                   "joints": null,
 #                   "mode": 0
