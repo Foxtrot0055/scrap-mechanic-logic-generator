@@ -1,7 +1,7 @@
 import sm_logic_lib as sm
 
 for i in range(5):
-    sm.make.logic_gate(i,0,0)
+    sm.make.logic_gate(i,0,0, [2])
 sm.make.print()
 
 #this prints:
