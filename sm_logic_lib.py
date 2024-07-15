@@ -3,7 +3,7 @@ import json
 class make():
     blueprint = {'bodies': [{'childs': []}],'version': 4}
     id_count = 0
-    def logic_gate(pos_x, pos_y, pos_z, output=None, rot=[0,0], type=0, color="222222"):
+    def logic_gate(pos_x, pos_y, pos_z, output=None, rot=[2,1], type=0, color="222222"):
         output_list = []
         if output != None: 
             for id in output:
