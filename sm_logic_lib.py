@@ -4,7 +4,7 @@ class make():
     blueprint = {'bodies': [{'childs': []}],'version': 4}
     id_count = 0
     
-    def logic_gate(pos_x, pos_y, pos_z, output=None, rot=[2,1], type=0, color="222222"):
+    def logic_gate(pos_x, pos_y, pos_z, type=0, output=None, rot=[2,1], color="222222"):
         output_list = []
         if output != None: 
             for id in output:
@@ -14,15 +14,15 @@ class make():
         make.id_count += 1
         return make.id_count-1
 
-    def connect(from, to):
-        if make.blueprint['bodies'][0]['childs'][from]['controllers'] != None:
-            for id in to:
-                make.blueprint['bodies'][0]['childs'][from]['controllers'].append({'id': id})
-        else:
+    def connect(controller, destination):
+        if make.blueprint['bodies'][0]['childs'][controller]['controller']['controllers'] == None:
             output_list = []
-            for id in to:
+            for id in destination:
                 output_list.append({'id': id})
-            make.blueprint['bodies'][0]['childs'][from]['controllers'] = output_list
-        
+            make.blueprint['bodies'][0]['childs'][controller]['controller']['controllers'] = output_list
+        else:       
+            for id in destination:
+                make.blueprint['bodies'][0]['childs'][controller]['controller']['controllers'].append({'id': id})
+    
     def print():
         print(json.dumps(make.blueprint, indent=3))
